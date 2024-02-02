@@ -48,7 +48,7 @@ def validate_date(date):
 #################################################
 
 # reflect an existing database into a new model
-engine = create_engine("sqlite:///Resources/hawaii.sqlite")
+engine = create_engine("sqlite:///../Resources/hawaii.sqlite")
 
 # # reflect the tables
 base = automap_base()
@@ -139,3 +139,6 @@ def temp_start_end(start, end):
             "Temps Max": temps_max,
             "Temps Avg": temps_avg
             }
+
+if __name__ == '__main__':  
+   app.run()
